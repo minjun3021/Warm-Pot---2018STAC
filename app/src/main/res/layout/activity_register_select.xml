@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background"
+    tools:context=".activity.registerSelect">
+
+
+    <ImageView
+        android:id="@+id/rs_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/rs_t1"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:text="따뜻한 화분"
+        android:textColor="#ffffff"
+        android:textSize="33sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rs_layout" />
+
+    <TextView
+        android:id="@+id/rs_t2"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="우울증 예방 솔루션"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rs_t1" />
+
+    <Button
+        android:id="@+id/rs_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_rs_btn"
+        android:text="회원가입"
+        android:textColor="#30ec9f"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/rs_kakaobtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rs_t2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/rs_kakaobtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/rs_already"
+        app:layout_constraintLeft_toLeftOf="@+id/rs_btn"
+        app:layout_constraintRight_toRightOf="@+id/rs_btn"
+        app:layout_constraintTop_toBottomOf="@id/rs_btn" />
+    <TextView
+        android:id="@+id/rs_already"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계정이 이미 있으신가요?"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rs_kakaobtn" />
+</android.support.constraint.ConstraintLayout>
