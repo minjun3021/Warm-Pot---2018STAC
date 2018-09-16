@@ -14,7 +14,6 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -91,8 +90,7 @@ public class registerActivity extends AppCompatActivity {
 
                                         }
                                     });
-                                }
-                                else{
+                                } else {
                                     Toast.makeText(registerActivity.this, "비밀번호가 일치 하지 않습니다.", Toast.LENGTH_SHORT).show();
                                     passcheck.requestFocus();
                                 }

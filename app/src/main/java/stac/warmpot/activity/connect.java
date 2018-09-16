@@ -13,18 +13,18 @@ import stac.warmpot.R;
 
 
 public class connect extends AppCompatActivity {
-    EditText e1,e2,e3,e4;
+    EditText e1, e2, e3, e4;
     Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
-        btn=findViewById(R.id.connect_btn);
-        e1=findViewById(R.id.connect_e1);
-        e2=findViewById(R.id.connect_e2);
-        e3=findViewById(R.id.connect_e3);
-        e4=findViewById(R.id.connect_e4);
+        btn = findViewById(R.id.connect_btn);
+        e1 = findViewById(R.id.connect_e1);
+        e2 = findViewById(R.id.connect_e2);
+        e3 = findViewById(R.id.connect_e3);
+        e4 = findViewById(R.id.connect_e4);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +39,7 @@ public class connect extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(e1.length()==4){
+                if (e1.length() == 4) {
                     e2.requestFocus();
                 }
             }
@@ -57,7 +57,7 @@ public class connect extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(e2.length()==4){
+                if (e2.length() == 4) {
                     e3.requestFocus();
                 }
             }
@@ -75,7 +75,7 @@ public class connect extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(e3.length()==4){
+                if (e3.length() == 4) {
                     e4.requestFocus();
                 }
             }
