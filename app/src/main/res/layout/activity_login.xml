@@ -30,6 +30,8 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="20dp"
+        android:maxLines="1"
+        android:inputType="text"
         app:layout_constraintLeft_toLeftOf="@id/login_btn"
         app:layout_constraintRight_toRightOf="@id/login_btn"
         android:id="@+id/login_id"
@@ -55,6 +57,7 @@
         android:textSize="14sp"
         android:textColor="#b9b9b9"
         android:text="사용자 아이디"
+
         android:id="@+id/login_t4"
         app:layout_constraintLeft_toLeftOf="@id/login_btn"
         app:layout_constraintBottom_toTopOf="@id/login_id"
