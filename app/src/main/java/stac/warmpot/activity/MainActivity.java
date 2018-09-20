@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int i) {
                 switch (i) {
                     case 0:
+                        getWindow().setStatusBarColor(0xff2eec7e);
                         iv1.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
                         iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("cu", String.valueOf(viewpager.getCurrentItem()));
                         break;
                     case 1:
+                        getWindow().setStatusBarColor(0xff2eec7e);
                         iv4.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv2.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
                         iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
@@ -88,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("cu", String.valueOf(viewpager.getCurrentItem()));
                         break;
                     case 2:
+                        getWindow().setStatusBarColor(0xff2eec7e);
                         iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv3.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("cu", String.valueOf(viewpager.getCurrentItem()));
                         break;
                     case 3:
+                        getWindow().setStatusBarColor(0xfffafafa);
                         iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv4.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
