@@ -29,7 +29,7 @@ import stac.warmpot.BackPressCloseHandler;
 import stac.warmpot.R;
 
 
-public class registerSelect extends AppCompatActivity {
+public class RegisterSelectActivity extends AppCompatActivity {
     Button resbutton;
     TextView already;
     private SessionCallback callback;
@@ -52,7 +52,7 @@ public class registerSelect extends AppCompatActivity {
         resbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(registerSelect.this, registerActivity.class);
+                Intent intent = new Intent(RegisterSelectActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ public class registerSelect extends AppCompatActivity {
         already.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(registerSelect.this, Login.class);
+                Intent intent = new Intent(RegisterSelectActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -90,14 +90,15 @@ public class registerSelect extends AppCompatActivity {
             @Override
             public void onSuccess(MeV2Response result) {
                 // TODO 나중에 서버 연동할떄 서버에 보낼 access_token값
+                SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                SharedPreferences.Editor editor = pref.edit();
                 String access_token = Session.getCurrentSession().getTokenInfo().getAccessToken();
 
                 Log.e("token", access_token);
+                Log.e("user",result.getNickname());
+                Toast.makeText(RegisterSelectActivity.this, result.getNickname()+"님 로그인 되었습니다.", Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(registerSelect.this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show();
-
-                SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
-                SharedPreferences.Editor editor = pref.edit();
+                editor.putString("kakaoname",result.getNickname());
                 editor.putInt("login", 0);
                 editor.putInt("kakao", 1);
                 editor.putString("kakaotoken", access_token);
@@ -106,7 +107,7 @@ public class registerSelect extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(registerSelect.this, connect.class);
+                        Intent intent = new Intent(RegisterSelectActivity.this, connect.class);
                         startActivity(intent);
                         finish();
                     }

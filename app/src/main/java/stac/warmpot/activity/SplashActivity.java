@@ -10,7 +10,7 @@ import android.widget.Toast;
 import stac.warmpot.R;
 
 
-public class Splash extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
     String token;
     int login;
     int kakao;
@@ -26,19 +26,19 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 if(token!="def" && login==1){
-                    Toast.makeText(Splash.this, "자동로그인 되었습니다.", Toast.LENGTH_SHORT).show();
-                    Intent intent =new Intent(Splash.this,connect.class);
+                    Toast.makeText(SplashActivity.this, "자동로그인 되었습니다.", Toast.LENGTH_SHORT).show();
+                    Intent intent =new Intent(SplashActivity.this,connect.class);
                     startActivity(intent);
                     finish();
                 }
                 else if(kakao==1){
-                    Toast.makeText(Splash.this, "카카오톡 자동로그인 되었습니다.", Toast.LENGTH_SHORT).show();
-                    Intent intent =new Intent(Splash.this,connect.class);
+                    Toast.makeText(SplashActivity.this, "카카오톡 자동로그인 되었습니다.", Toast.LENGTH_SHORT).show();
+                    Intent intent =new Intent(SplashActivity.this,connect.class);
                     startActivity(intent);
                     finish();
                 }
                 else{
-                    Intent intent = new Intent(Splash.this, registerSelect.class);
+                    Intent intent = new Intent(SplashActivity.this, RegisterSelectActivity.class);
 
                     startActivity(intent);
                     finish();

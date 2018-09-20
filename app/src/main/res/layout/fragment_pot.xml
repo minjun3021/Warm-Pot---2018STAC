@@ -1,14 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#fff"
     android:layout_height="match_parent"
+
     tools:context=".fragment.PotFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/pot_action_bar"
+        android:background="@drawable/bg_background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="pot" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pot_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="12dp"
+            android:text="나의 친구"
+            android:textColor="#ffffff"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/pot_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:src="@drawable/pot_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pot_action_bar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/pot_layout"
+        android:layout_height="0dp"
+        android:background="#fff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/pot_layout_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/pot_layout_2"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/pot_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_pot_btn1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:id="@+id/pot_btn1_image"
+                app:layout_constraintBottom_toBottomOf="@id/pot_btn1"
+                app:layout_constraintLeft_toLeftOf="@id/pot_btn1"
+                app:layout_constraintTop_toTopOf="@id/pot_btn1"
+                android:src="@drawable/noun_water_1454691"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:textColor="#ffffff"
+                android:text="습도"
+                app:layout_constraintTop_toTopOf="@id/pot_btn1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/pot_btn1_image"
+                android:layout_marginLeft="17dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/pot_btn1"
+                app:layout_constraintBottom_toBottomOf="@id/pot_btn1"
+                app:layout_constraintRight_toRightOf="@id/pot_btn1"
+                android:layout_marginRight="30dp"
+                android:id="@+id/pot_t1"
+                android:textSize="21sp"
+                android:textColor="#ffffff"
+                android:text="보통"
+                />
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/pot_layout_2"
+            app:layout_constraintTop_toBottomOf="@id/pot_layout_1"
+            app:layout_constraintBottom_toTopOf="@id/pot_layout_3"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/pot_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_pot_btn2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:id="@+id/pot_btn2_image"
+                app:layout_constraintBottom_toBottomOf="@id/pot_btn2"
+                app:layout_constraintLeft_toLeftOf="@id/pot_btn2"
+                app:layout_constraintTop_toTopOf="@id/pot_btn2"
+                android:src="@drawable/ondo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:textColor="#ffffff"
+                android:text="온도"
+                app:layout_constraintTop_toTopOf="@id/pot_btn2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/pot_btn2_image"
+                android:layout_marginLeft="17dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/pot_btn2"
+                app:layout_constraintBottom_toBottomOf="@id/pot_btn2"
+                app:layout_constraintRight_toRightOf="@id/pot_btn2"
+                android:layout_marginRight="30dp"
+                android:id="@+id/pot_t2"
+                android:textSize="21sp"
+                android:textColor="#ffffff"
+                android:text="보통"
+                />
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/pot_layout_3"
+            app:layout_constraintTop_toBottomOf="@+id/pot_layout_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/pot_btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_rectangle_3_copy"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:id="@+id/pot_btn3_image"
+                app:layout_constraintBottom_toBottomOf="@id/pot_btn3"
+                app:layout_constraintLeft_toLeftOf="@id/pot_btn3"
+                app:layout_constraintTop_toTopOf="@id/pot_btn3"
+                android:src="@drawable/noun_water_1454691"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:textColor="#ffffff"
+                android:text="상태"
+                app:layout_constraintTop_toTopOf="@id/pot_btn3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/pot_btn3_image"
+                android:layout_marginLeft="17dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/pot_btn3"
+                app:layout_constraintBottom_toBottomOf="@id/pot_btn3"
+                app:layout_constraintRight_toRightOf="@id/pot_btn3"
+                android:layout_marginRight="30dp"
+                android:textSize="21sp"
+                android:id="@+id/pot_t3"
+                android:textColor="#ffffff"
+                android:text="보통"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
 
 </android.support.constraint.ConstraintLayout>

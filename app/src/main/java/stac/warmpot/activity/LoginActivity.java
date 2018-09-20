@@ -25,7 +25,7 @@ import stac.warmpot.data.LoginModel;
 import stac.warmpot.retrofit.NetworkHelper;
 
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     TextView notres;
     EditText loginid;
     EditText password;
@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity {
                     public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                         int status = response.body().getStatus();
                         if (status == 200) {
-                            Toast.makeText(Login.this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "로그인 되었습니다.", Toast.LENGTH_SHORT).show();
                             Log.e("login", response.body().getData().getToken());
                             SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
                             SharedPreferences.Editor editor = pref.edit();
@@ -60,14 +60,14 @@ public class Login extends AppCompatActivity {
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Intent intent = new Intent(Login.this, connect.class);
+                                    Intent intent = new Intent(LoginActivity.this, connect.class);
                                     startActivity(intent);
                                     finish();
                                 }
                             }, 1000);
 
                         } else if (status == 401) {
-                            Toast.makeText(Login.this, "아이디 또는 비밀번호를 다시 확인 하세요.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 다시 확인 하세요.", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
         notres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, registerSelect.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterSelectActivity.class);
                 startActivity(intent);
                 finish();
             }

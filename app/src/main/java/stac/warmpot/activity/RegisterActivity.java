@@ -21,7 +21,7 @@ import stac.warmpot.R;
 import stac.warmpot.data.RegisterModel;
 import stac.warmpot.retrofit.NetworkHelper;
 
-public class registerActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     RadioButton b0, b1;
     RadioGroup rg;
     String gender, token;
@@ -73,7 +73,7 @@ public class registerActivity extends AppCompatActivity {
                                                 new Handler().postDelayed(new Runnable() {
                                                     @Override
                                                     public void run() {
-                                                        Intent intent = new Intent(registerActivity.this, Login.class);
+                                                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                                         startActivity(intent);
                                                         finish();
 
@@ -91,24 +91,24 @@ public class registerActivity extends AppCompatActivity {
                                         }
                                     });
                                 } else {
-                                    Toast.makeText(registerActivity.this, "비밀번호가 일치 하지 않습니다.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterActivity.this, "비밀번호가 일치 하지 않습니다.", Toast.LENGTH_SHORT).show();
                                     passcheck.requestFocus();
                                 }
                             } else {
-                                Toast.makeText(registerActivity.this, "비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, "비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show();
                                 pass.requestFocus();
                             }
                         } else {
-                            Toast.makeText(registerActivity.this, "아이디를 입력해주세요.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "아이디를 입력해주세요.", Toast.LENGTH_SHORT).show();
                             res_id.requestFocus();
                         }
 
                     } else {
-                        Toast.makeText(registerActivity.this, "생년월일을 입력해주세요.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "생년월일을 입력해주세요.", Toast.LENGTH_SHORT).show();
                         birth.requestFocus();
                     }
                 } else {
-                    Toast.makeText(registerActivity.this, "이름을 입력해주세요.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "이름을 입력해주세요.", Toast.LENGTH_SHORT).show();
                     name.requestFocus();
                 }
 
