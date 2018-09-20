@@ -7,6 +7,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 
 
@@ -40,6 +41,30 @@ public class MainActivity extends AppCompatActivity {
         bottomnavigation.bringToFront();
         iv1.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
 
+        i1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewpager.setCurrentItem(0);
+            }
+        });
+        i2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewpager.setCurrentItem(1);
+            }
+        });
+        i3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewpager.setCurrentItem(2);
+            }
+        });
+        i4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewpager.setCurrentItem(3);
+            }
+        });
         viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float positionOffset, int positionOffsetPixels) {
@@ -47,25 +72,34 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int i) {
-                Log.e("asdf", String.valueOf(i));
                 switch (i) {
                     case 0:
                         iv1.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
                         iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        iv4.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        Log.e("cu", String.valueOf(viewpager.getCurrentItem()));
                         break;
                     case 1:
-                        iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        iv4.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv2.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
+                        iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        Log.e("cu", String.valueOf(viewpager.getCurrentItem()));
                         break;
                     case 2:
+                        iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv3.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
                         iv4.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        Log.e("cu", String.valueOf(viewpager.getCurrentItem()));
                         break;
                     case 3:
+                        iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                         iv4.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
                         iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                        Log.e("cu", String.valueOf(viewpager.getCurrentItem()));
                         break;
 
                 }
