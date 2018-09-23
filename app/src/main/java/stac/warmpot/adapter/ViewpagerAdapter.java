@@ -1,13 +1,14 @@
 package stac.warmpot.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+        import android.support.v4.app.Fragment;
+        import android.support.v4.app.FragmentManager;
+        import android.support.v4.app.FragmentPagerAdapter;
 
-import stac.warmpot.fragment.BookFragment;
-import stac.warmpot.fragment.PotFragment;
-import stac.warmpot.fragment.SettingsFragment;
-import stac.warmpot.fragment.SpeakFragment;
+        import stac.warmpot.fragment.BookFragment;
+        import stac.warmpot.fragment.PlantgrowFragment;
+        import stac.warmpot.fragment.PotFragment;
+        import stac.warmpot.fragment.SettingsFragment;
+        import stac.warmpot.fragment.SpeakFragment;
 
 public class ViewpagerAdapter extends FragmentPagerAdapter {
 
@@ -25,7 +26,7 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
             case 2:
                 return BookFragment.newInstance();
             case 3:
-                return SettingsFragment.newInstance();
+                return PlantgrowFragment.newInstance();
         }
         return null;
     }

@@ -35,6 +35,7 @@ public class PotFragment extends Fragment {
 
         constraintLayout=v.findViewById(R.id.pot_layout);
         constraintLayout.bringToFront();
+
         return v;
     }
 
