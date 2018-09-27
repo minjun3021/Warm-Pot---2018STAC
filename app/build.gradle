@@ -6,7 +6,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "stac.warmpot"
-        minSdkVersion 21
+        minSdkVersion 18
         targetSdkVersion 27
         versionCode 3
         versionName "1.2"

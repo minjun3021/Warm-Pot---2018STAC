@@ -11,13 +11,9 @@ import com.kakao.auth.KakaoAdapter;
 import com.kakao.auth.KakaoSDK;
 
 public class GlobalApplication extends Application {
-
     // TODO KakaoSDKAdapter 클래스 static 지워줘도 작동함
     private class KakaoSDKAdapter extends KakaoAdapter {
-        /**
-         * Session Config에 대해서는 default값들이 존재한다.
-         * 필요한 상황에서만 override해서 사용하면 됨.
-         * @return Session의 설정값.
+        /*** Session Config에 대해서는 default값들이 존재한다.* 필요한 상황에서만 override해서 사용하면 됨.* @return Session의 설정값.
          */
         @Override
         public ISessionConfig getSessionConfig() {
@@ -26,29 +22,24 @@ public class GlobalApplication extends Application {
                 public AuthType[] getAuthTypes() {
                     return new AuthType[] {AuthType.KAKAO_LOGIN_ALL};
                 }
-
                 @Override
                 public boolean isUsingWebviewTimer() {
                     return false;
                 }
-
                 @Override
                 public boolean isSecureMode() {
                     return false;
                 }
-
                 @Override
                 public ApprovalType getApprovalType() {
                     return ApprovalType.INDIVIDUAL;
                 }
-
                 @Override
                 public boolean isSaveFormData() {
                     return true;
                 }
             };
         }
-
         @Override
         public IApplicationConfig getApplicationConfig() {
             return new IApplicationConfig() {
@@ -60,13 +51,9 @@ public class GlobalApplication extends Application {
             };
         }
     }
-
     @Override
     public void onCreate() {
         super.onCreate();
-
         KakaoSDK.init(new KakaoSDKAdapter());
-
     }
-
 }

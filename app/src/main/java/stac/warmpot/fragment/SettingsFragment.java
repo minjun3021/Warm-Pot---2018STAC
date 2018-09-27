@@ -18,7 +18,7 @@ import stac.warmpot.activity.connect;
 
 
 public class SettingsFragment extends Fragment implements View.OnClickListener {
-    MainActivity mainActivity= (MainActivity) getActivity();
+    MainActivity mainActivity;
     ConstraintLayout c1,c2,c3;
     public static SettingsFragment newInstance() {
         SettingsFragment fragment = new SettingsFragment();
@@ -34,7 +34,7 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_settings, container, false);
-
+        mainActivity= (MainActivity) getActivity();
         c1=v.findViewById(R.id.layout_logout);
         c2=v.findViewById(R.id.layout_mypot);
         c3=v.findViewById(R.id.layout_parent);
@@ -53,9 +53,11 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
 
                 break;
             case R.id.layout_mypot:
+                mainActivity.mypot();
                 Log.e("mypot","gg");
                 break;
             case R.id.layout_parent:
+                mainActivity.parentinfo();
                 Log.e("parent","gg");
                 break;
         }

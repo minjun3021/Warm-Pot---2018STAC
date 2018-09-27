@@ -10,6 +10,7 @@ public class NetworkHelper {
 
     private static Retrofit retrofit;
 
+
     public static NetworkInterface getInstance() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()

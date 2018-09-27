@@ -29,10 +29,10 @@ public class connect extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(connect.this,MainActivity.class);
-                startActivity(intent);
-                finish();
-                //Toast.makeText(connect.this, "제품코드가 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
+//                Intent intent=new Intent(connect.this,MainActivity.class);
+//                startActivity(intent);
+//                finish();
+                Toast.makeText(connect.this, "제품코드가 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
             }
         });
         e1.addTextChangedListener(new TextWatcher() {

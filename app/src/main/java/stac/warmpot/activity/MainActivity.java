@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
@@ -118,21 +119,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
     }
     public void SharedDelete(){
-        /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = prefs.edit();
         editor.clear();
 
-        editor.commit();*/
+        editor.commit();
 
 
     }
     public void mypot(){
-
     }
     public void parentinfo(){
-
     }
 
 
