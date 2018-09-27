@@ -21,3 +21,5 @@ public interface NetworkInterface {
             , @Field("gender") String gender
             , @Field("auth_type") String type);
 }
+
+
