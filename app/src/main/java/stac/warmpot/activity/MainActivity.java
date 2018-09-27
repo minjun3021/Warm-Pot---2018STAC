@@ -1,13 +1,17 @@
 package stac.warmpot.activity;
 
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -15,6 +19,7 @@ import java.util.ArrayList;
 import stac.warmpot.FragmentUtils;
 import stac.warmpot.R;
 import stac.warmpot.fragment.BookFragment;
+import stac.warmpot.fragment.ParentFragment;
 import stac.warmpot.fragment.PlantgrowFragment;
 import stac.warmpot.fragment.PotFragment;
 import stac.warmpot.fragment.SettingsFragment;
@@ -28,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     BookFragment bookFragment;
     SettingsFragment settingsFragment;
     PlantgrowFragment plantgrowFragment;
-
+    ParentFragment parentFragment;
 
     ConstraintLayout bottomnavigation;
     ConstraintLayout i1, i2, i3, i4;
@@ -45,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         bookFragment=new BookFragment();
         settingsFragment=new SettingsFragment();
         plantgrowFragment=new PlantgrowFragment();
-
+        parentFragment=new ParentFragment();
         frameLayout=findViewById(R.id.FrameLayout);
         i1 = findViewById(R.id.item_1);
         i2 = findViewById(R.id.item_2);
@@ -63,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(bookFragment);
         fragments.add(settingsFragment);
         fragments.add(plantgrowFragment);
+        fragments.add(parentFragment);
         final FragmentUtils fragmentUtils=new FragmentUtils(R.id.FrameLayout,fragments);
         iv1.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
         fragmentUtils.setCurrentFragmentByPosition(getSupportFragmentManager(),0,new Bundle());
@@ -111,6 +117,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    public void SharedDelete(){
+        /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.clear();
+
+        editor.commit();*/
+
+
+    }
+    public void mypot(){
+
+    }
+    public void parentinfo(){
 
     }
 
