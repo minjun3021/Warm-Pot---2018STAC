@@ -69,24 +69,44 @@ public class MainActivity extends AppCompatActivity {
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getWindow().setStatusBarColor(0xff2eec7e);
+                iv1.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
+                iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv4.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                 fragmentUtils.setCurrentFragmentByPosition(getSupportFragmentManager(),0,new Bundle());
             }
         });
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getWindow().setStatusBarColor(0xff2eec7e);
+                iv4.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv2.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
+                iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                 fragmentUtils.setCurrentFragmentByPosition(getSupportFragmentManager(),1,new Bundle());
             }
         });
         i3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getWindow().setStatusBarColor(0xff2eec7e);
+                iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv3.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
+                iv4.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                 fragmentUtils.setCurrentFragmentByPosition(getSupportFragmentManager(),2,new Bundle());
             }
         });
         i4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getWindow().setStatusBarColor(0xfffafafa);
+                iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
+                iv4.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
+                iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                 fragmentUtils.setCurrentFragmentByPosition(getSupportFragmentManager(),3,new Bundle());
             }
         });
