@@ -66,8 +66,12 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }, 1000);
 
-                        } else if (status == 401) {
+                        } else if (status == 403) {
+                            Toast.makeText(LoginActivity.this, "제품코드를 발급받은 아이디가 아닙니다.", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
                             Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 다시 확인 하세요.", Toast.LENGTH_SHORT).show();
+
                         }
                     }
 

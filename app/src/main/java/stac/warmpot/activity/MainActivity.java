@@ -109,12 +109,13 @@ public class MainActivity extends AppCompatActivity {
         i4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getWindow().setStatusBarColor(0xfffafafa);
                 iv1.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                 iv2.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
                 iv4.setBackgroundTintList(ColorStateList.valueOf(0xff2EEC7E));
                 iv3.setBackgroundTintList(ColorStateList.valueOf(0xffa1a1a1));
-                fragmentUtils.setCurrentFragmentByPosition(getSupportFragmentManager(),3,new Bundle());
+                fragmentUtils.setCurrentFragmentByPosition(getSupportFragmentManager(),4,new Bundle());
             }
         });
 

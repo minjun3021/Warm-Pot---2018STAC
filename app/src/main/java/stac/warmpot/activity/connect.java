@@ -32,6 +32,8 @@ public class connect extends AppCompatActivity {
 //                Intent intent=new Intent(connect.this,MainActivity.class);
 //                startActivity(intent);
 //                finish();
+
+
                 Toast.makeText(connect.this, "제품코드가 올바르지 않습니다.", Toast.LENGTH_SHORT).show();
             }
         });
